@@ -38,7 +38,7 @@ class Response
 
         $this->client = $client;
         $this->response = $response;
-        $this->data = $response['data'];
+        $this->data = (is_null($response) ? null : $response['data']);
         return $this;
     }
 
